@@ -1,16 +1,49 @@
-# React + Vite
+# 💎 Nechi Bling – Wear the Joy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Nechi Bling is a home-grown imitation jewellery brand offering elegant, boutique-style designs for everyday wear and gifting.
 
-Currently, two official plugins are available:
+Built with love by two sisters who are corporate IT professionals, Nechi Bling blends Indian aesthetics with modern design—bringing beautiful jewellery without the premium price tag.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🌸 **Tagline:** Wear the Joy
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌟 About the Brand
 
-## Expanding the ESLint configuration
+Nechi Bling started as a small home-based business in our local community.  
+Alongside our full-time IT careers, we wanted to create something meaningful—where women could find stylish, high-quality imitation jewellery that feels special, yet affordable.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Every piece is thoughtfully handpicked to ensure it adds joy, confidence, and elegance to your everyday moments.
+
+---
+
+## 🌐 Website
+
+This repository contains the source code for the **Nechi Bling official website**.
+
+- Built using **React + Vite**
+- Deployed on **Netlify**
+- Designed for simplicity, performance, and mobile responsiveness
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React
+- **Build Tool:** Vite
+- **Styling:** CSS
+- **Deployment:** Netlify
+- **Version Control:** Git & GitHub
+
+---
+
+## 🚀 Local Development
+
+To run the project locally:
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
