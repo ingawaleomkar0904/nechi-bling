@@ -1,11 +1,33 @@
 .contact-header {
-  padding: 180px 0 60px;
+  padding: 160px 0 72px;
   text-align: center;
-  background-color: var(--white);
+  background-color: var(--bg-cream);
+}
+
+.contact-label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--secondary-gold);
+  margin-bottom: 16px;
+  font-weight: 600;
 }
 
 .contact-header h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.contact-header-desc {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.6;
 }
 
 .contact-grid {
@@ -107,8 +129,8 @@
 }
 
 @media (max-width: 768px) {
-  .contact-header h1 {
-    font-size: 2.5rem;
+  .contact-header {
+    padding: 140px 0 56px;
   }
 
   .offline-form {

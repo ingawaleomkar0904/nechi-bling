@@ -15,9 +15,11 @@ const Contact = () => {
     <div className="contact-page">
       <section className="contact-header">
         <div className="container">
-          <h1 className="serif">Get in Touch</h1>
-          <div className="gold-divider"></div>
-          <p>We'd love to hear from you. Reach out for orders or enquiries.</p>
+          <span className="contact-label">Contact</span>
+          <h1 className="serif">We&apos;d love to hear from you.</h1>
+          <p className="contact-header-desc">
+            Questions, custom orders, gifting help — drop us a message and we&apos;ll reply soon.
+          </p>
         </div>
       </section>
 
