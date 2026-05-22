@@ -33,7 +33,7 @@ const Home = () => {
               Elegant Indian heritage meets modern craftsmanship. Hand-picked imitation jewellery for your daily sparkle and festive grace.
             </p>
             <div className="hero-ctas">
-              <a href="https://wa.me/911234567890" className="btn btn-primary">
+              <a href="https://wa.me/917248914154" className="btn btn-primary">
                 <MessageCircle size={18} style={{ marginRight: '8px' }} />
                 Order on WhatsApp
               </a>
@@ -99,7 +99,7 @@ const Home = () => {
           <div className="cta-box">
             <h2 className="serif">Found something you love?</h2>
             <p>Drop us a quick WhatsApp message — we'll help you pick the right piece, confirm your order and have it lovingly packed within a day.</p>
-            <a href="https://wa.me/911234567890" className="btn btn-primary large-wa-btn">
+            <a href="https://wa.me/917248914154" className="btn btn-primary large-wa-btn">
               <MessageCircle size={24} style={{ marginRight: '12px' }} />
               Chat with us on WhatsApp
             </a>
