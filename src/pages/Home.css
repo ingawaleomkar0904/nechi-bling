@@ -1,0 +1,234 @@
+.hero {
+  padding: 160px 0 100px;
+  background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.05), transparent);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.brand-badge {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--secondary-gold);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.hero-logo-box {
+  margin-bottom: 2rem;
+  display: flex;
+}
+
+.hero-logo {
+  height: 250px;
+  width: auto;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.12));
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 20px;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 200px 200px 20px 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.image-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.intro-banner {
+  background-color: var(--white);
+  text-align: center;
+}
+
+.intro-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.intro-content p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.category-card {
+  text-align: center;
+}
+
+.category-image {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: var(--shadow);
+}
+
+.category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.category-card:hover .category-image img {
+  transform: scale(1.1);
+}
+
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(93, 14, 7, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.category-card:hover .category-overlay {
+  opacity: 1;
+}
+
+.btn-shop {
+  background-color: var(--white);
+  color: var(--primary-maroon);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.category-card h3 {
+  font-size: 1.4rem;
+  color: var(--text-dark);
+}
+
+.whatsapp-cta-section {
+  padding-bottom: 100px;
+}
+
+.cta-box {
+  background-color: var(--primary-maroon);
+  border-radius: 24px;
+  padding: 60px 40px;
+  text-align: center;
+  color: var(--white);
+  box-shadow: 0 20px 40px rgba(93, 14, 7, 0.2);
+}
+
+.cta-box h2 {
+  color: var(--white);
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.cta-box p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.large-wa-btn {
+  background-color: #25D366; /* WhatsApp Green */
+  font-size: 1.2rem;
+  padding: 18px 40px;
+}
+
+.large-wa-btn:hover {
+  background-color: #128C7E;
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-description {
+    margin: 0 auto 40px;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  .hero-logo-box {
+    justify-content: center;
+  }
+
+  .hero-logo {
+    height: 100px;
+  }
+
+  .hero-image {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .cta-box h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,121 @@
+.contact-header {
+  padding: 180px 0 60px;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.contact-header h1 {
+  font-size: 3.5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  padding: 80px 20px;
+}
+
+.contact-card {
+  display: flex;
+  gap: 25px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+  transition: var(--transition);
+}
+
+.contact-card:hover {
+  transform: translateX(10px);
+  box-shadow: var(--shadow);
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon.wa { background-color: rgba(37, 211, 102, 0.1); color: #25D366; }
+.contact-icon.ig { background-color: rgba(225, 48, 108, 0.1); color: #E1306C; }
+.contact-icon.loc { background-color: rgba(93, 14, 7, 0.1); color: var(--primary-maroon); }
+
+.contact-detail h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.contact-detail p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.contact-link {
+  font-weight: 700;
+  color: var(--primary-maroon);
+  font-size: 1.1rem;
+}
+
+.offline-form {
+  background: var(--bg-cream);
+  border-radius: 30px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px dashed var(--secondary-gold);
+}
+
+.form-promo svg {
+  margin-bottom: 25px;
+}
+
+.form-promo h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.form-promo p {
+  margin-bottom: 35px;
+  color: var(--text-light);
+}
+
+.footer-note {
+  padding: 100px 0;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.footer-note p {
+  font-size: 2.5rem;
+  color: var(--secondary-gold);
+  opacity: 0.5;
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .offline-form {
+    padding: 30px 20px;
+  }
+
+  .footer-note p {
+    font-size: 1.8rem;
+  }
+}

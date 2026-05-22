@@ -1,0 +1,133 @@
+.how-header {
+  padding: 180px 0 60px;
+  text-align: center;
+  background: white;
+}
+
+.how-header h1 {
+  font-size: 3.5rem;
+}
+
+.steps-section {
+  background-color: var(--bg-cream);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  position: relative;
+}
+
+.step-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.step-number {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-maroon);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 15px rgba(93, 14, 7, 0.3);
+}
+
+.step-icon {
+  color: var(--secondary-gold);
+  margin-bottom: 25px;
+}
+
+.step-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.step-content p {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.step-arrow {
+  position: absolute;
+  right: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--secondary-gold);
+  display: none;
+}
+
+.wrapping-section {
+  padding-bottom: 100px;
+}
+
+.wrapping-box {
+  background: white;
+  padding: 60px;
+  border-radius: 30px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.wrapping-box h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.wrapping-box p {
+  margin-bottom: 40px;
+  color: var(--text-light);
+}
+
+.wrapping-features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.feature {
+  background-color: var(--bg-cream);
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--primary-maroon);
+}
+
+@media (max-width: 992px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapping-box {
+    padding: 40px 20px;
+  }
+
+  .wrapping-features {
+    gap: 15px;
+  }
+
+  .feature {
+    width: 100%;
+  }
+}
