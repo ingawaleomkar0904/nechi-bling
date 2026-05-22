@@ -97,7 +97,7 @@ const Home = () => {
       <section className="whatsapp-cta-section">
         <div className="container">
           <div className="cta-box">
-            <h2 className="serif">Find Something You Love?</h2>
+            <h2 className="serif">Found something you love?</h2>
             <p>Send us a screenshot on WhatsApp to check availability and place your order.</p>
             <a href="https://wa.me/911234567890" className="btn btn-primary large-wa-btn">
               <MessageCircle size={24} style={{ marginRight: '12px' }} />

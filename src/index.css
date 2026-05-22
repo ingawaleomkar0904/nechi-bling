@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Quicksand', 'Inter', sans-serif;
   background-color: var(--bg-cream);
   color: var(--text-dark);
   line-height: 1.6;
