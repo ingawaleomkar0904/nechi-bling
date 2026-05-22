@@ -5,13 +5,13 @@ import heroImg from '../assets/hero.png';
 import banglesImg from '../assets/bangles.png';
 import earringsImg from '../assets/earrings.png';
 import logo from '../assets/logo.png';
-
+import giftingImg from '../assets/gifting_image_1779443416146.png';
 const Home = () => {
   const categories = [
     { title: 'Bangles', image: banglesImg, path: '/shop?cat=bangles' },
     { title: 'Earrings', image: earringsImg, path: '/shop?cat=earrings' },
     { title: 'Neckpieces', image: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&q=80', path: '/shop?cat=neckpieces' },
-    { title: 'Gifting', image: 'https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&q=80', path: '/shop?cat=gifting' },
+    { title: 'Gifting', image: giftingImg, path: '/shop?cat=gifting' },
   ];
 
   return (
@@ -97,8 +97,8 @@ const Home = () => {
       <section className="whatsapp-cta-section">
         <div className="container">
           <div className="cta-box">
-            <h2 className="serif">Found something you love?</h2>
-            <p>Send us a screenshot on WhatsApp to check availability and place your order.</p>
+            <h2 className="serif">Drop us a quick WhatsApp message — we'll help you pick the right piece, confirm your order and have it lovingly packed within a day.</h2>
+<p></p>
             <a href="https://wa.me/911234567890" className="btn btn-primary large-wa-btn">
               <MessageCircle size={24} style={{ marginRight: '12px' }} />
               Chat with us on WhatsApp
