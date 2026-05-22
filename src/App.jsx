@@ -6,6 +6,7 @@ import Shop from './pages/Shop';
 import HowToOrder from './pages/HowToOrder';
 import Contact from './pages/Contact';
 import WhatsAppButton from './components/WhatsAppButton';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,13 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <WhatsAppButton />
-      <footer className="footer" style={{textAlign: 'center', padding: '60px 0', backgroundColor: '#FCF8F1', borderTop: '1px solid rgba(212, 175, 55, 0.2)'}}>
-        <div className="container">
-          <h2 className="serif" style={{color: '#5D0E07', marginBottom: '10px'}}>Nechi Bling</h2>
-          <p style={{color: '#666', fontSize: '0.9rem'}}>&copy; 2024 Nechi Bling. All rights reserved.</p>
-          <p style={{color: '#D4AF37', fontSize: '0.8rem', marginTop: '10px', letterSpacing: '2px', textTransform: 'uppercase'}}>Wear the Joy</p>
-        </div>
-      </footer>
+      <Footer />
     </Router>
   );
 }
