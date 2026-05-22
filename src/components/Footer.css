@@ -107,7 +107,7 @@
   width: 18px;
   height: 18px;
   flex-shrink: 0;
-  color: #25d366;
+  color: var(--wa-green);
 }
 
 .footer-contact-icon {

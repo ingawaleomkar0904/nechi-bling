@@ -27,8 +27,8 @@ const values = [
 
 const About = () => {
   return (
-    <div className="about-page">
-      <section className="about-hero">
+    <div className="page-shell">
+      <section className="page-hero about-hero">
         <div className="container">
           <motion.div
             className="about-hero-content"
@@ -41,9 +41,9 @@ const About = () => {
             </div>
             <h1 className="serif">About Nechi Bling</h1>
             <div className="gold-divider" />
-            <p className="subtitle">Nechi = Neha + Prachi</p>
+            <p className="about-subtitle">Nechi = Neha + Prachi</p>
 
-            <div className="story-text">
+            <div className="story-text surface-card">
               <p>
                 Nechi Bling is more than just a jewellery brand—it is a reflection of the bond
                 between two sisters and their shared love for Indian aesthetics blended with modern design.
@@ -71,8 +71,8 @@ const About = () => {
 
       <section className="about-values">
         <div className="container">
-          <div className="about-section-head">
-            <span className="about-label">What we stand for</span>
+          <div className="section-intro">
+            <span className="page-label">What we stand for</span>
             <h2 className="serif">Built on care, craft, and connection</h2>
           </div>
           <div className="about-values-grid">
@@ -81,13 +81,13 @@ const About = () => {
               return (
                 <motion.article
                   key={item.title}
-                  className="about-value-card"
+                  className="about-value-card surface-card"
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.08 }}
                 >
-                  <div className="about-value-icon">
+                  <div className="icon-circle icon-circle--gold">
                     <Icon size={22} strokeWidth={1.5} />
                   </div>
                   <h3>{item.title}</h3>
@@ -102,12 +102,12 @@ const About = () => {
       <section className="about-banner">
         <div className="container">
           <motion.div
-            className="about-banner-card"
+            className="cta-maroon"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <span className="about-label light">Our promise</span>
+            <span className="page-label page-label--light">Our promise</span>
             <h2 className="serif">Home-grown & women-led</h2>
             <p>
               By small-business lovers, for small-business lovers. From selection to packaging,
@@ -120,7 +120,7 @@ const About = () => {
       <section className="about-cta">
         <div className="container">
           <motion.div
-            className="about-cta-inner"
+            className="about-cta-inner surface-card"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

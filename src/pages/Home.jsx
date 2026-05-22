@@ -29,7 +29,7 @@ const Home = () => {
             <div className="hero-logo-box">
               <img src={logo} alt="Nechi Bling Logo" className="hero-logo" />
             </div>
-            <div className="brand-badge">ESTD 2026</div>
+            <span className="page-label">ESTD 2026</span>
             <h1>Wear the Joy</h1>
             <p className="hero-description">
               Elegant Indian heritage meets modern craftsmanship. Hand-picked imitation jewellery for your daily sparkle and festive grace.
@@ -69,9 +69,10 @@ const Home = () => {
 
       <section id="categories" className="categories">
         <div className="container">
-          <div className="section-header">
+          <div className="section-intro">
+            <span className="page-label">Browse</span>
             <h2 className="serif">Featured Categories</h2>
-            <p>Handpicked selections for every occasion</p>
+            <p className="page-desc">Handpicked selections for every occasion</p>
           </div>
           <div className="category-grid">
             {categories.map((cat, index) => (
@@ -98,7 +99,7 @@ const Home = () => {
 
       <section className="whatsapp-cta-section">
         <div className="container">
-          <div className="cta-box">
+          <div className="cta-maroon">
             <h2 className="serif">Found something you love?</h2>
             <p>Drop us a quick WhatsApp message — we&apos;ll help you pick the right piece, confirm your order and have it lovingly packed within a day.</p>
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="wa-btn wa-btn--lg">

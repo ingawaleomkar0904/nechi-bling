@@ -125,18 +125,18 @@ const Shop = () => {
   };
 
   return (
-    <div className="shop-page">
-      <section className="shop-hero">
+    <div className="page-shell">
+      <section className="page-hero">
         <div className="container">
           <motion.div
-            className="shop-hero-inner"
+            className="page-hero-inner page-hero-inner--wide"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="shop-label">Shop</span>
-            <h1>Our collection</h1>
-            <p className="shop-hero-desc">
+            <span className="page-label">Shop</span>
+            <h1 className="page-title">Our collection</h1>
+            <p className="page-desc">
               Handpicked imitation jewellery for everyday joy and festive moments. Tap
               &ldquo;Order on WhatsApp&rdquo; on any piece — we&apos;ll confirm availability and
               guide you through payment and delivery.
@@ -166,7 +166,7 @@ const Shop = () => {
                 <button
                   key={cat}
                   type="button"
-                  className={`shop-filter-btn ${filter === cat ? 'active' : ''}`}
+                  className={`filter-pill ${filter === cat ? 'active' : ''}`}
                   onClick={() => handleFilter(cat)}
                 >
                   {cat}
@@ -193,7 +193,7 @@ const Shop = () => {
                 {filteredProducts.map((product, index) => (
                   <motion.article
                     key={product.id}
-                    className="shop-card"
+                    className="shop-card surface-card"
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.04 }}
@@ -240,7 +240,7 @@ const Shop = () => {
 
           <p className="shop-note">
             Prices are indicative. Final amount confirmed on WhatsApp. See{' '}
-            <Link to="/how-to-order">how to order</Link> for payment &amp; delivery details.
+            <Link to="/how-to-order" className="text-link">how to order</Link> for payment &amp; delivery details.
           </p>
         </div>
       </section>
@@ -248,7 +248,7 @@ const Shop = () => {
       <section className="shop-help">
         <div className="container">
           <motion.div
-            className="shop-help-box"
+            className="cta-maroon"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

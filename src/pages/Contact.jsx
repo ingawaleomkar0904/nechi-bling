@@ -52,18 +52,18 @@ const contactMethods = [
 
 const Contact = () => {
   return (
-    <div className="contact-page">
-      <section className="contact-header">
+    <div className="page-shell">
+      <section className="page-hero">
         <div className="container">
           <motion.div
-            className="contact-header-inner"
+            className="page-hero-inner"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="contact-label">Contact</span>
-            <h1>We&apos;d love to hear from you.</h1>
-            <p className="contact-header-desc">
+            <span className="page-label">Contact</span>
+            <h1 className="page-title">We&apos;d love to hear from you.</h1>
+            <p className="page-desc">
               Questions, custom orders, gifting help — drop us a message and we&apos;ll reply soon.
             </p>
           </motion.div>
@@ -76,14 +76,14 @@ const Contact = () => {
             {contactMethods.map((method, index) => (
               <motion.article
                 key={method.title}
-                className="contact-method-card"
+                className="contact-method-card surface-card"
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
               >
-                <div className={`contact-method-icon ${method.iconClass}`}>{method.icon}</div>
-                <h3>{method.title}</h3>
+                  <div className={`icon-circle icon-circle--${method.iconClass}`}>{method.icon}</div>
+                  <h3 className="body-heading">{method.title}</h3>
                 <p>{method.description}</p>
                 <a
                   href={method.link}
@@ -102,16 +102,16 @@ const Contact = () => {
       <section className="contact-address">
         <div className="container">
           <motion.div
-            className="contact-address-card"
+            className="contact-address-card surface-card"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="contact-method-icon loc">
+            <div className="icon-circle icon-circle--maroon">
               <MapPin size={22} strokeWidth={1.5} />
             </div>
             <div>
-              <h3>Home-based atelier</h3>
+              <h3 className="body-heading">Home-based atelier</h3>
               <p>
                 Flat #1302, E-Wing, AARCON,
                 <br />
@@ -126,7 +126,7 @@ const Contact = () => {
       <section className="contact-cta">
         <div className="container">
           <motion.div
-            className="contact-cta-box"
+            className="cta-maroon"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

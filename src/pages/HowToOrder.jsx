@@ -43,18 +43,18 @@ const policyCards = [
 
 const HowToOrder = () => {
   return (
-    <div className="how-to-order-page">
-      <section className="hto-hero">
+    <div className="page-shell">
+      <section className="page-hero">
         <div className="container">
           <motion.div
-            className="hto-hero-inner"
+            className="page-hero-inner"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <span className="hto-label">How to order</span>
-            <h1 className="serif">Ordering is as easy as a WhatsApp ping.</h1>
-            <p className="hto-hero-sub">
+            <span className="page-label">How to order</span>
+            <h1 className="page-title">Ordering is as easy as a WhatsApp ping.</h1>
+            <p className="page-desc">
               No carts, no logins, no confusion — just a friendly chat with us.
             </p>
           </motion.div>
@@ -69,7 +69,7 @@ const HowToOrder = () => {
               return (
                 <motion.article
                   key={step.num}
-                  className="hto-step-card"
+                  className="hto-step-card surface-card"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -81,7 +81,7 @@ const HowToOrder = () => {
                     </div>
                     <span className="hto-step-badge">{step.num}</span>
                   </div>
-                  <h3>{step.title}</h3>
+                  <h3 className="body-heading">{step.title}</h3>
                   <p>{step.description}</p>
                 </motion.article>
               );
@@ -92,16 +92,18 @@ const HowToOrder = () => {
 
       <section className="hto-packaging-intro">
         <div className="container">
-          <span className="hto-label">Lovingly packaged</span>
-          <h2 className="serif">Every order, gift-wrapped with care.</h2>
-          <p className="hto-packaging-desc">
+          <div className="section-intro">
+            <span className="page-label">Lovingly packaged</span>
+            <h2 className="serif">Every order, gift-wrapped with care.</h2>
+            <p className="page-desc">
             Each piece arrives in a premium organza pouch with our logo sticker and a heartfelt
             thank-you card — because unboxing should feel as special as wearing it.
-          </p>
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Exact packaging design from your screenshot (single graphic) */}
+      {/* Packaging infographic */}
       <section className="hto-packaging-visual" aria-label="Packaging highlights and how we wrap your order">
         <div className="container">
           <img
@@ -115,7 +117,7 @@ const HowToOrder = () => {
       <section className="hto-cta-section">
         <div className="container">
           <motion.div
-            className="hto-cta-box"
+            className="cta-maroon"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -139,7 +141,7 @@ const HowToOrder = () => {
             {policyCards.map((card, index) => (
               <motion.div
                 key={card.title}
-                className="hto-policy-card"
+                className="hto-policy-card surface-card"
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

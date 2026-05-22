@@ -2,50 +2,51 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #25D366;
-  color: white;
-  width: 65px;
-  height: 65px;
+  background-color: var(--wa-green);
+  color: var(--white);
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
   z-index: 999;
-  transition: all 0.3s ease;
+  transition: var(--transition);
 }
 
 .floating-wa:hover {
-  transform: scale(1.1) rotate(5deg);
-  background-color: #128C7E;
+  transform: scale(1.08);
+  background-color: var(--wa-green-hover);
+  color: var(--white);
 }
 
 .tooltip {
   position: absolute;
-  right: 80px;
-  background-color: rgba(0,0,0,0.8);
-  color: white;
-  padding: 6px 15px;
+  right: 72px;
+  background-color: var(--primary-maroon);
+  color: var(--white);
+  font-family: var(--font-sans);
+  padding: 6px 14px;
   border-radius: 8px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: var(--transition);
 }
 
 .floating-wa:hover .tooltip {
   opacity: 1;
   visibility: visible;
-  right: 85px;
 }
 
 @media (max-width: 768px) {
   .floating-wa {
     bottom: 20px;
     right: 20px;
-    width: 55px;
-    height: 55px;
+    width: 54px;
+    height: 54px;
   }
 }
