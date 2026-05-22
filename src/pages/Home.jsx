@@ -1,16 +1,18 @@
 import { motion } from 'framer-motion';
-import { ShoppingBag, ChevronRight, MessageCircle } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
+import WhatsAppIcon, { WHATSAPP_URL } from '../components/WhatsAppIcon';
 import './Home.css';
 import heroImg from '../assets/hero.png';
 import banglesImg from '../assets/bangles.png';
 import earringsImg from '../assets/earrings.png';
 import logo from '../assets/logo.png';
 import giftingImg from '../assets/gifting_image_1779443416146.png';
+
 const Home = () => {
   const categories = [
     { title: 'Bangles', image: banglesImg, path: '/shop?cat=bangles' },
     { title: 'Earrings', image: earringsImg, path: '/shop?cat=earrings' },
-    { title: 'Neckpieces', image: 'https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&q=80', path: '/shop?cat=neckpieces' },
+    { title: 'Neckpieces', image: heroImg, path: '/shop?cat=neckpieces' },
     { title: 'Gifting', image: giftingImg, path: '/shop?cat=gifting' },
   ];
 
@@ -18,7 +20,7 @@ const Home = () => {
     <div className="home-page">
       <section className="hero">
         <div className="container hero-container">
-          <motion.div 
+          <motion.div
             className="hero-content"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -33,14 +35,14 @@ const Home = () => {
               Elegant Indian heritage meets modern craftsmanship. Hand-picked imitation jewellery for your daily sparkle and festive grace.
             </p>
             <div className="hero-ctas">
-              <a href="https://wa.me/917248914154" className="btn btn-primary">
-                <MessageCircle size={18} style={{ marginRight: '8px' }} />
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="wa-btn">
+                <WhatsAppIcon size={18} />
                 Order on WhatsApp
               </a>
               <a href="#categories" className="btn btn-outline">Explore Collection</a>
             </div>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="hero-image"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -73,8 +75,8 @@ const Home = () => {
           </div>
           <div className="category-grid">
             {categories.map((cat, index) => (
-              <motion.div 
-                key={cat.title} 
+              <motion.div
+                key={cat.title}
                 className="category-card"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -98,9 +100,9 @@ const Home = () => {
         <div className="container">
           <div className="cta-box">
             <h2 className="serif">Found something you love?</h2>
-            <p>Drop us a quick WhatsApp message — we'll help you pick the right piece, confirm your order and have it lovingly packed within a day.</p>
-            <a href="https://wa.me/917248914154" className="btn btn-primary large-wa-btn">
-              <MessageCircle size={24} style={{ marginRight: '12px' }} />
+            <p>Drop us a quick WhatsApp message — we&apos;ll help you pick the right piece, confirm your order and have it lovingly packed within a day.</p>
+            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="wa-btn wa-btn--lg">
+              <WhatsAppIcon size={22} />
               Chat with us on WhatsApp
             </a>
           </div>

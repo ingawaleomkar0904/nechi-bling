@@ -181,16 +181,6 @@
   opacity: 0.9;
 }
 
-.large-wa-btn {
-  background-color: #25D366; /* WhatsApp Green */
-  font-size: 1.2rem;
-  padding: 18px 40px;
-}
-
-.large-wa-btn:hover {
-  background-color: #128C7E;
-}
-
 @media (max-width: 992px) {
   .hero-container {
     grid-template-columns: 1fr;

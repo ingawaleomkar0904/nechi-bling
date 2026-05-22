@@ -82,6 +82,43 @@ img {
   color: var(--white);
 }
 
+/* Uniform WhatsApp buttons site-wide */
+.wa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #25d366;
+  color: var(--white);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+  text-decoration: none;
+}
+
+.wa-btn:hover {
+  background-color: #128c7e;
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.4);
+}
+
+.wa-btn--lg {
+  padding: 16px 36px;
+  font-size: 1rem;
+  gap: 10px;
+}
+
+.wa-btn--block {
+  width: 100%;
+}
+
 .gold-divider {
   width: 60px;
   height: 2px;

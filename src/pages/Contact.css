@@ -185,25 +185,6 @@
   margin-bottom: 24px;
 }
 
-.contact-wa-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #25d366;
-  color: var(--white);
-  padding: 14px 32px;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
-}
-
-.contact-wa-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
-}
-
 @media (max-width: 900px) {
   .contact-cards-grid {
     grid-template-columns: 1fr;
