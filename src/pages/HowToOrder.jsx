@@ -1,23 +1,9 @@
 import { motion } from 'framer-motion';
-import {
-  Search,
-  MessageCircle,
-  CheckCircle2,
-  Truck,
-  ShoppingBag,
-  Tag,
-  Heart,
-  Gift,
-  Package,
-} from 'lucide-react';
-import logo from '../assets/logo.png';
-import packagingHero from '../assets/packaging-infographic.png';
-import banglesImg from '../assets/bangles.png';
-import giftingImg from '../assets/gifting_image_1779443416146.png';
+import { Search, MessageCircle, CheckCircle2, Truck } from 'lucide-react';
+import packagingSection from '../assets/packaging-section.png';
 import './HowToOrder.css';
 
 const WHATSAPP_URL = 'https://wa.me/917248914154';
-const INSTAGRAM_URL = 'https://instagram.com/nechi.bling';
 
 const WhatsAppIcon = ({ size = 20 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -56,47 +42,6 @@ const orderSteps = [
   },
 ];
 
-const packagingHighlights = [
-  { icon: ShoppingBag, label: 'Premium Organza Pouch' },
-  { icon: Tag, label: 'Branded Logo Sticker' },
-  { icon: Heart, label: 'Thank You Card' },
-  { icon: Package, label: 'Secure & Elegant Packaging' },
-  { icon: Gift, label: 'Perfect for Gifting' },
-];
-
-const wrapSteps = [
-  {
-    num: 1,
-    image: banglesImg,
-    caption: 'Carefully place the bangles in an organza pouch.',
-  },
-  {
-    num: 2,
-    image: packagingHero,
-    caption: 'Add love with a thank you card & logo sticker.',
-  },
-  {
-    num: 3,
-    image: banglesImg,
-    caption: 'Tie it up with satin ribbon for a perfect finish.',
-  },
-  {
-    num: 4,
-    image: giftingImg,
-    caption: 'Pack it safely in branded tissue paper.',
-  },
-  {
-    num: 5,
-    image: packagingHero,
-    caption: 'Seal it with our branded sticker.',
-  },
-  {
-    num: 6,
-    image: giftingImg,
-    caption: 'Ready to deliver happiness to your doorstep.',
-  },
-];
-
 const policyCards = [
   { title: 'Payment', text: 'UPI, Bank transfer, GPay' },
   { title: 'Delivery', text: 'Pan India shipping · 3–5 days' },
@@ -106,7 +51,6 @@ const policyCards = [
 const HowToOrder = () => {
   return (
     <div className="how-to-order-page">
-      {/* Hero */}
       <section className="hto-hero">
         <div className="container">
           <motion.div
@@ -124,7 +68,6 @@ const HowToOrder = () => {
         </div>
       </section>
 
-      {/* 4-step process */}
       <section className="hto-steps-section">
         <div className="container">
           <div className="hto-steps-grid">
@@ -154,7 +97,6 @@ const HowToOrder = () => {
         </div>
       </section>
 
-      {/* Packaging intro */}
       <section className="hto-packaging-intro">
         <div className="container">
           <span className="hto-label">Lovingly packaged</span>
@@ -166,93 +108,17 @@ const HowToOrder = () => {
         </div>
       </section>
 
-      {/* Packaging hero + highlights */}
-      <section className="hto-packaging-showcase">
+      {/* Exact packaging design from your screenshot (single graphic) */}
+      <section className="hto-packaging-visual" aria-label="Packaging highlights and how we wrap your order">
         <div className="container">
-          <div className="hto-packaging-split">
-            <div className="hto-packaging-photo">
-              <img
-                src={packagingHero}
-                alt="Nechi Bling jewellery in organza pouch with thank you card and branded packaging"
-              />
-            </div>
-            <div className="hto-packaging-details">
-              <img src={logo} alt="Nechi Bling" className="hto-packaging-logo" />
-              <p className="hto-packaging-brand-line">
-                Nechi Bling — Wear the Joy <Heart size={14} className="inline-heart" />
-              </p>
-              <h3 className="hto-highlights-title">Packaging highlights</h3>
-              <ul className="hto-highlights-list">
-                {packagingHighlights.map(({ icon: Icon, label }) => (
-                  <li key={label}>
-                    <Icon size={18} strokeWidth={1.5} />
-                    <span>{label}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          <img
+            src={packagingSection}
+            alt="Nechi Bling packaging: organza pouch, thank you card, packaging highlights, how we wrap your order, and contact details"
+            className="hto-packaging-full-img"
+          />
         </div>
       </section>
 
-      {/* How we wrap — 6 steps */}
-      <section className="hto-wrap-section">
-        <div className="container">
-          <div className="hto-wrap-heading">
-            <span className="hto-ornament" aria-hidden="true" />
-            <h2 className="serif">How we wrap your order</h2>
-            <span className="hto-ornament hto-ornament-right" aria-hidden="true" />
-          </div>
-
-          <div className="hto-wrap-grid">
-            {wrapSteps.map((step, index) => (
-              <motion.figure
-                key={step.num}
-                className="hto-wrap-card"
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.06 }}
-              >
-                <div className="hto-wrap-image">
-                  <span className="hto-wrap-num">{step.num}</span>
-                  <img src={step.image} alt="" />
-                </div>
-                <figcaption>{step.caption}</figcaption>
-              </motion.figure>
-            ))}
-          </div>
-
-          <div className="hto-info-bar">
-            <div className="hto-info-item">
-              <Heart size={18} />
-              <div>
-                <strong>Made with love</strong>
-                <p>
-                  प्रत्येक दागिना निवडताना आणि पॅक करताना आम्ही काळजी, प्रेम आणि जबाबदारी जपतो.
-                </p>
-              </div>
-            </div>
-            <div className="hto-info-item hto-info-center">
-              <Gift size={18} />
-              <strong>Perfect for you & your loved ones</strong>
-            </div>
-            <div className="hto-info-item hto-info-connect">
-              <strong>Let&apos;s stay connected</strong>
-              <div className="hto-connect-links">
-                <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
-                  @nechi.bling
-                </a>
-                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-                  +91 72489 14154
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
       <section className="hto-cta-section">
         <div className="container">
           <motion.div
@@ -274,7 +140,6 @@ const HowToOrder = () => {
         </div>
       </section>
 
-      {/* Policy cards */}
       <section className="hto-policy-section">
         <div className="container">
           <div className="hto-policy-grid">
