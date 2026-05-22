@@ -1,7 +1,18 @@
-.contact-header {
-  padding: 160px 0 72px;
-  text-align: center;
+.contact-page {
   background-color: var(--bg-cream);
+  min-height: 100vh;
+}
+
+/* ── Header (matches How to Order hero) ── */
+.contact-header {
+  padding: 160px 0 56px;
+  text-align: center;
+  background: var(--bg-cream);
+}
+
+.contact-header-inner {
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .contact-label {
@@ -15,9 +26,10 @@
 }
 
 .contact-header h1 {
+  font-family: 'Cinzel', serif;
   font-size: clamp(2rem, 4.5vw, 2.75rem);
   font-weight: 600;
-  color: var(--text-dark);
+  color: #1a1a1a;
   margin-bottom: 20px;
   line-height: 1.3;
 }
@@ -30,114 +42,193 @@
   line-height: 1.6;
 }
 
-.contact-grid {
+/* ── Contact method cards ── */
+.contact-methods {
+  padding: 8px 0 32px;
+}
+
+.contact-cards-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 80px;
-  padding: 80px 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.contact-card {
-  display: flex;
-  gap: 25px;
-  background: white;
-  padding: 30px;
-  border-radius: 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-  transition: var(--transition);
+.contact-method-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px 26px;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.1);
 }
 
-.contact-card:hover {
-  transform: translateX(10px);
-  box-shadow: var(--shadow);
-}
-
-.contact-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 15px;
+.contact-method-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.contact-method-icon.wa {
+  background: rgba(37, 211, 102, 0.12);
+  color: #25d366;
+}
+
+.contact-method-icon.ig {
+  background: rgba(225, 48, 108, 0.1);
+  color: #c13584;
+}
+
+.contact-method-icon.mail {
+  background: rgba(93, 14, 7, 0.08);
+  color: var(--primary-maroon);
+}
+
+.contact-method-icon.loc {
+  background: rgba(93, 14, 7, 0.08);
+  color: var(--primary-maroon);
   flex-shrink: 0;
+  margin: 0;
 }
 
-.contact-icon.wa { background-color: rgba(37, 211, 102, 0.1); color: #25D366; }
-.contact-icon.ig { background-color: rgba(225, 48, 108, 0.1); color: #E1306C; }
-.contact-icon.loc { background-color: rgba(93, 14, 7, 0.1); color: var(--primary-maroon); }
-
-.contact-detail h3 {
-  font-size: 1.4rem;
-  margin-bottom: 5px;
+.contact-method-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  font-family: 'Quicksand', 'Inter', sans-serif;
 }
 
-.contact-detail p {
+.contact-method-card p {
+  font-size: 0.85rem;
   color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.contact-method-link {
+  font-weight: 600;
   font-size: 0.95rem;
+  color: var(--primary-maroon);
+  transition: color 0.2s ease;
+}
+
+.contact-method-link:hover {
+  color: #7d140c;
+}
+
+/* ── Address ── */
+.contact-address {
+  padding-bottom: 48px;
+}
+
+.contact-address-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.contact-address-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  font-family: 'Quicksand', 'Inter', sans-serif;
+}
+
+.contact-address-card p {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.65;
+}
+
+.contact-address-note {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: var(--secondary-gold);
+  letter-spacing: 0.5px;
+}
+
+/* ── CTA (matches How to Order) ── */
+.contact-cta {
+  padding-bottom: 80px;
+}
+
+.contact-cta-box {
+  background: var(--primary-maroon);
+  border-radius: 20px;
+  padding: 48px 40px;
+  text-align: center;
+  color: var(--white);
+}
+
+.contact-cta-box h2 {
+  color: var(--white);
+  font-size: clamp(1.6rem, 3vw, 2rem);
   margin-bottom: 10px;
 }
 
-.contact-link {
-  font-weight: 700;
-  color: var(--primary-maroon);
-  font-size: 1.1rem;
+.contact-cta-box p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 24px;
 }
 
-.offline-form {
-  background: var(--bg-cream);
-  border-radius: 30px;
-  padding: 50px;
-  display: flex;
+.contact-wa-btn {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: 1px dashed var(--secondary-gold);
+  gap: 10px;
+  background: #25d366;
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
 }
 
-.form-promo svg {
-  margin-bottom: 25px;
+.contact-wa-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
 }
 
-.form-promo h2 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
-}
-
-.form-promo p {
-  margin-bottom: 35px;
-  color: var(--text-light);
-}
-
-.footer-note {
-  padding: 100px 0;
-  text-align: center;
-  background-color: var(--white);
-}
-
-.footer-note p {
-  font-size: 2.5rem;
-  color: var(--secondary-gold);
-  opacity: 0.5;
-}
-
-@media (max-width: 992px) {
-  .contact-grid {
+@media (max-width: 900px) {
+  .contact-cards-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    max-width: 420px;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 768px) {
   .contact-header {
-    padding: 140px 0 56px;
+    padding: 140px 0 48px;
   }
 
-  .offline-form {
-    padding: 30px 20px;
+  .contact-address-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 28px 22px;
   }
 
-  .footer-note p {
-    font-size: 1.8rem;
+  .contact-method-icon.loc {
+    margin: 0 auto;
+  }
+
+  .contact-cta-box {
+    padding: 36px 24px;
   }
 }
