@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Search, MessageCircle, CheckCircle2, Truck } from 'lucide-react';
+import { Search, MessageCircle, CheckCircle2, Truck, CreditCard, ShieldCheck } from 'lucide-react';
 import WhatsAppIcon, { WHATSAPP_URL } from '../components/WhatsAppIcon';
 import packagingSection from '../assets/packaging-section.png';
 import './HowToOrder.css';
@@ -36,9 +36,36 @@ const orderSteps = [
 ];
 
 const policyCards = [
-  { title: 'Payment', text: 'UPI, Bank transfer, GPay' },
-  { title: 'Delivery', text: 'Pan India shipping · 3–5 days' },
-  { title: 'Returns', text: 'Damage on arrival reported within 24 hrs' },
+  {
+    title: 'Payment Options',
+    icon: CreditCard,
+    subtitle: '100% Secure & Direct',
+    details: [
+      'GPay, PhonePe, Paytm & BHIM UPI',
+      'Net Banking (IMPS / NEFT transfers)',
+      'No extra card fees or processing charges',
+    ],
+  },
+  {
+    title: 'Delivery Policy',
+    icon: Truck,
+    subtitle: 'Reliable Pan-India Shipping',
+    details: [
+      'Dispatched within 24 hours of payment',
+      'Arrives in 3–5 days with tracking link',
+      'Pune local self-pickup on request',
+    ],
+  },
+  {
+    title: 'Return Policy',
+    icon: ShieldCheck,
+    subtitle: '100% Handpicked Quality',
+    details: [
+      'Double-checked for defects before boxing',
+      'Transit damage must be reported in 24 hrs',
+      'Unboxing video required for replacement',
+    ],
+  },
 ];
 
 const HowToOrder = () => {
@@ -52,7 +79,6 @@ const HowToOrder = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <span className="page-label">How to order</span>
             <h1 className="page-title">Ordering is as easy as a WhatsApp ping.</h1>
             <p className="page-desc">
               No carts, no logins, no confusion — just a friendly chat with us.
@@ -96,8 +122,8 @@ const HowToOrder = () => {
             <span className="page-label">Lovingly packaged</span>
             <h2 className="serif">Every order, gift-wrapped with care.</h2>
             <p className="page-desc">
-            Each piece arrives in a premium organza pouch with our logo sticker and a heartfelt
-            thank-you card — because unboxing should feel as special as wearing it.
+              Each piece arrives in a premium organza pouch with our logo sticker and a heartfelt
+              thank-you card — because unboxing should feel as special as wearing it.
             </p>
           </div>
         </div>
@@ -138,19 +164,38 @@ const HowToOrder = () => {
       <section className="hto-policy-section">
         <div className="container">
           <div className="hto-policy-grid">
-            {policyCards.map((card, index) => (
-              <motion.div
-                key={card.title}
-                className="hto-policy-card surface-card"
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
-              >
-                <h3>{card.title}</h3>
-                <p>{card.text}</p>
-              </motion.div>
-            ))}
+            {policyCards.map((card, index) => {
+              const Icon = card.icon;
+              return (
+                <motion.div
+                  key={card.title}
+                  className="hto-policy-card surface-card"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.08 }}
+                >
+                  <div className="hto-policy-header">
+                    <div className="hto-policy-icon">
+                      <Icon size={22} strokeWidth={1.5} />
+                    </div>
+                    <div className="hto-policy-meta">
+                      <h3 className="hto-policy-title serif">{card.title}</h3>
+                      <span className="hto-policy-subtitle">{card.subtitle}</span>
+                    </div>
+                  </div>
+                  <div className="gold-divider-small" />
+                  <ul className="hto-policy-details">
+                    {card.details.map((detail, idx) => (
+                      <li key={idx}>
+                        <span className="bullet">✦</span>
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

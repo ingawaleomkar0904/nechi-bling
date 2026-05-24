@@ -61,7 +61,6 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="page-label">Contact</span>
             <h1 className="page-title">We&apos;d love to hear from you.</h1>
             <p className="page-desc">
               Questions, custom orders, gifting help — drop us a message and we&apos;ll reply soon.

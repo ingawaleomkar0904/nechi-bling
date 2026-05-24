@@ -1,20 +1,21 @@
 .shop-trust {
-  padding-bottom: 36px;
+  padding: 12px 0 24px;
 }
 
 .shop-trust-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px 28px;
+  gap: 16px 36px;
 }
 
 .shop-trust-list li {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.82rem;
-  color: var(--text-light);
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-weight: 500;
 }
 
 .shop-trust-list li svg {
@@ -23,7 +24,7 @@
 }
 
 .shop-catalog {
-  padding-bottom: 48px;
+  padding: 24px 0 48px;
 }
 
 .shop-toolbar {
@@ -262,3 +263,183 @@
 .wishlist-btn.bounce {
   animation: heartBounce 0.4s ease;
 }
+
+/* ── Lightbox Zoom Modal ── */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(22, 4, 2, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-card {
+  background: var(--bg-cream);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-gold-strong);
+  box-shadow: 0 24px 64px rgba(93, 14, 7, 0.25);
+  max-width: 820px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  max-height: 90vh;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--border-gold);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  color: var(--primary-maroon);
+  transition: all 0.25s ease;
+}
+
+.modal-close:hover {
+  transform: scale(1.08);
+  background: var(--white);
+  color: var(--primary-maroon-hover);
+  border-color: var(--primary-maroon);
+}
+
+.modal-content {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: stretch;
+  height: 100%;
+}
+
+.modal-image-wrapper {
+  background: #f5efe6;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.modal-card:hover .modal-image {
+  transform: scale(1.03);
+}
+
+.modal-info {
+  padding: 48px 40px 48px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  background: var(--white);
+  border-left: 1px solid var(--border-gold);
+}
+
+.modal-category {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--secondary-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.modal-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary-maroon);
+  line-height: 1.25;
+  margin-top: -8px;
+}
+
+.modal-desc {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.modal-footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 1px solid var(--border-gold);
+  padding-top: 24px;
+}
+
+.modal-price-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-label-text {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.modal-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-maroon);
+}
+
+@media (max-width: 768px) {
+  .modal-card {
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+
+  .modal-content {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-image-wrapper {
+    aspect-ratio: 4/3;
+  }
+
+  .modal-info {
+    padding: 24px;
+    gap: 16px;
+  }
+
+  .modal-title {
+    font-size: 1.35rem;
+  }
+
+  .modal-desc {
+    font-size: 0.88rem;
+  }
+
+  .modal-footer-section {
+    padding-top: 16px;
+  }
+
+  .modal-price {
+    font-size: 1.35rem;
+  }
+}
+

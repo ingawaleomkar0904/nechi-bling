@@ -1,13 +1,15 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Package, Sparkles, Gift, Heart } from 'lucide-react';
+import { MessageCircle, Package, Sparkles, Gift, Heart, X } from 'lucide-react';
 import WhatsAppIcon, { WHATSAPP_URL } from '../components/WhatsAppIcon';
 import './Shop.css';
-import banglesImg from '../assets/bangles.png';
-import earringsImg from '../assets/earrings.png';
-import giftingImg from '../assets/gifting_image_1779443416146.png';
-import heroImg from '../assets/hero.png';
+
+// Premium Generated Assets
+import templeJhumkaImg from '../assets/temple_jhumka.png';
+import maroonBanglesImg from '../assets/maroon_bangles.png';
+import kundanChokerImg from '../assets/kundan_choker.png';
+import giftBoxPremiumImg from '../assets/gift_box_premium.png';
 
 const CATEGORIES = ['All', 'Bangles', 'Earrings', 'Neckpieces', 'Gifting'];
 
@@ -25,64 +27,64 @@ const products = [
     name: 'Temple Jhumka Earrings',
     category: 'Earrings',
     price: '₹499',
-    image: earringsImg,
-    description: 'Classic temple-motif jhumkas — light, comfortable, perfect for daily wear.',
+    image: templeJhumkaImg,
+    description: 'Classic temple-motif jhumkas featuring delicate rubies and hanging pearls — light, comfortable, and perfect for daily wear.',
   },
   {
     id: 2,
     name: 'Pearl Drop Jhumkas',
     category: 'Earrings',
     price: '₹550',
-    image: earringsImg,
-    description: 'Soft pearl drops with a subtle festive shimmer.',
+    image: templeJhumkaImg,
+    description: 'Elegantly detailed jhumkas with premium dangling pearls and subtle gold craftwork.',
   },
   {
     id: 3,
     name: 'Maroon Stone Bangles',
     category: 'Bangles',
     price: '₹850',
-    image: banglesImg,
-    description: 'Rich maroon stones set in gold-tone — a timeless festive favourite.',
+    image: maroonBanglesImg,
+    description: 'Rich maroon stones set in detailed gold-tone — a timeless festive favorite for weddings and rituals.',
   },
   {
     id: 4,
-    name: 'Gold-Plated Kada',
+    name: 'Gold-Plated Kada Pair',
     category: 'Bangles',
     price: '₹650',
-    image: banglesImg,
-    description: 'Sleek kada pair with a polished finish for everyday elegance.',
+    image: maroonBanglesImg,
+    description: 'Sleek, heavily patterned gold kada set with a polished premium finish.',
   },
   {
     id: 5,
     name: 'Kundan Choker Set',
     category: 'Neckpieces',
     price: '₹1,200',
-    image: heroImg,
-    description: 'Choker with matching earrings — ideal for weddings and celebrations.',
+    image: kundanChokerImg,
+    description: 'Stunning choker necklace decorated with premium Kundan stones and matching earrings — ideal for ethnic celebrations.',
   },
   {
     id: 6,
-    name: 'Layered Necklace Set',
+    name: 'Royal Choker Set',
     category: 'Neckpieces',
-    price: '₹950',
-    image: heroImg,
-    description: 'Delicate layered chain set that pairs beautifully with ethnic and fusion looks.',
+    price: '₹1,350',
+    image: kundanChokerImg,
+    description: 'A majestic Kundan neckpiece featuring intricate pearl drops and emerald accents.',
   },
   {
     id: 7,
-    name: 'Bridal Combo Set',
+    name: 'Bridal Combo Gift Box',
     category: 'Gifting',
     price: '₹2,500',
-    image: giftingImg,
-    description: 'Curated earrings + bangles set — gift-wrapped and ready to delight.',
+    image: giftBoxPremiumImg,
+    description: 'A curated gift box containing a matching pair of earrings and select Kada bangles, beautifully packaged.',
   },
   {
     id: 8,
-    name: 'Gift Box Special',
+    name: 'Signature Gift Box Special',
     category: 'Gifting',
     price: '₹1,500',
-    image: giftingImg,
-    description: 'A ready-to-gift box with handpicked pieces in our signature packaging.',
+    image: giftBoxPremiumImg,
+    description: 'Our signature Nechi Bling cream box lined with rich red velvet, containing handpicked luxury pieces.',
   },
 ];
 
@@ -99,6 +101,7 @@ const Shop = () => {
 
   const [filter, setFilter] = useState(initialFilter);
   const [wishlist, setWishlist] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const toggleWishlist = (id) => {
     setWishlist(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
@@ -109,6 +112,18 @@ const Shop = () => {
     if (mapped) setFilter(mapped);
     else if (!paramCat) setFilter('All');
   }, [paramCat]);
+
+  // Lock background scroll when modal is open
+  useEffect(() => {
+    if (selectedProduct) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedProduct]);
 
   const filteredProducts = useMemo(
     () => (filter === 'All' ? products : products.filter((p) => p.category === filter)),
@@ -139,12 +154,9 @@ const Shop = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="page-label">Shop</span>
             <h1 className="page-title">Our collection</h1>
             <p className="page-desc">
-              Handpicked imitation jewellery for everyday joy and festive moments. Tap
-              &ldquo;Order on WhatsApp&rdquo; on any piece — we&apos;ll confirm availability and
-              guide you through payment and delivery.
+              Explore our boutique collection of handpicked premium jewellery. Tap any image to zoom and read details, or order in one click via WhatsApp.
             </p>
           </motion.div>
         </div>
@@ -155,7 +167,7 @@ const Shop = () => {
           <ul className="shop-trust-list">
             {trustPoints.map(({ icon: Icon, text }) => (
               <li key={text}>
-                <Icon size={18} strokeWidth={1.5} />
+                <Icon size={20} strokeWidth={1.5} />
                 <span>{text}</span>
               </li>
             ))}
@@ -203,8 +215,16 @@ const Shop = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.04 }}
                   >
-                    <div className="shop-card-image">
-                      <button className={`wishlist-btn ${wishlist.includes(product.id) ? 'active bounce' : ''}`} onClick={(e) => { e.stopPropagation(); toggleWishlist(product.id); }} aria-label="Add to wishlist">
+                    <div 
+                      className="shop-card-image" 
+                      onClick={() => setSelectedProduct(product)}
+                      style={{ cursor: 'zoom-in' }}
+                    >
+                      <button 
+                        className={`wishlist-btn ${wishlist.includes(product.id) ? 'active bounce' : ''}`} 
+                        onClick={(e) => { e.stopPropagation(); toggleWishlist(product.id); }} 
+                        aria-label="Add to wishlist"
+                      >
                         <Heart size={18} fill={wishlist.includes(product.id) ? 'currentColor' : 'none'} />
                       </button>
                       <img src={product.image} alt={product.name} loading="lazy" />
@@ -221,7 +241,7 @@ const Shop = () => {
                           onClick={() => handleOrder(product)}
                         >
                           <WhatsAppIcon size={18} />
-                          Order on WhatsApp
+                          Order
                         </button>
                       </div>
                     </div>
@@ -252,6 +272,65 @@ const Shop = () => {
           </p>
         </div>
       </section>
+
+      {/* Modal Lightbox Zoom Popup */}
+      <AnimatePresence>
+        {selectedProduct && (
+          <motion.div
+            className="modal-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedProduct(null)}
+          >
+            <motion.div
+              className="modal-card"
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="modal-close"
+                onClick={() => setSelectedProduct(null)}
+                aria-label="Close popup"
+              >
+                <X size={20} />
+              </button>
+              
+              <div className="modal-content">
+                <div className="modal-image-wrapper">
+                  <img src={selectedProduct.image} alt={selectedProduct.name} className="modal-image" />
+                </div>
+                <div className="modal-info">
+                  <span className="modal-category">{selectedProduct.category}</span>
+                  <h2 className="modal-title serif">{selectedProduct.name}</h2>
+                  <p className="modal-desc">{selectedProduct.description}</p>
+                  
+                  <div className="modal-footer-section">
+                    <div className="modal-price-row">
+                      <span className="modal-label-text">Indicative Price</span>
+                      <span className="modal-price">{selectedProduct.price}</span>
+                    </div>
+                    <button
+                      type="button"
+                      className="wa-btn wa-btn--lg wa-btn--block"
+                      onClick={() => {
+                        handleOrder(selectedProduct);
+                        setSelectedProduct(null);
+                      }}
+                    >
+                      <WhatsAppIcon size={20} />
+                      Order
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <section className="shop-help">
         <div className="container">

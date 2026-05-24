@@ -30,7 +30,6 @@ const Home = () => {
             <div className="hero-logo-box">
               <img src={logo} alt="Nechi Bling Logo" className="hero-logo" />
             </div>
-            <span className="page-label">ESTD 2026</span>
             <h1>Wear the Joy</h1>
             <p className="hero-description">
               Elegant Indian heritage meets modern craftsmanship. Hand-picked imitation jewellery for your daily sparkle and festive grace.
@@ -109,30 +108,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="testimonials">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="serif">What Our Customers Say</h2>
-            <div className="gold-divider"></div>
-          </div>
-          <div className="testimonial-grid">
-            {[
-              { quote: 'The bangles I ordered were stunning! Perfect for my sister\'s engagement. Will definitely order again.', name: 'Priya M.', location: 'Mumbai' },
-              { quote: 'I love how every piece feels premium yet affordable. Nechi Bling is my go-to for festive jewellery!', name: 'Anjali S.', location: 'Pune' },
-              { quote: 'Ordered earrings for Diwali — they arrived beautifully packed. Such attention to detail!', name: 'Kavita R.', location: 'Thane' },
-            ].map((t, i) => (
-              <motion.div key={i} className="testimonial-card" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
-                <div className="quote-mark">❝</div>
-                <p className="quote-text">{t.quote}</p>
-                <div className="quote-author">
-                  <span className="author-name">{t.name}</span>
-                  <span className="author-location">{t.location}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       <section className="whatsapp-cta-section">
         <div className="container">
