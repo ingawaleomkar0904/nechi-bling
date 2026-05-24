@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, ChevronUp } from 'lucide-react';
 import WhatsAppIcon, { WHATSAPP_URL } from './WhatsAppIcon';
 import logo from '../assets/logo.png';
 import './Footer.css';
@@ -16,6 +16,10 @@ const INSTAGRAM_URL = 'https://instagram.com/nechi.bling';
 const EMAIL = 'hello@nechibling.in';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="site-footer">
       <div className="container">
@@ -72,7 +76,11 @@ const Footer = () => {
         <div className="footer-divider" />
 
         <div className="footer-bottom">
-          <p>&copy; 2026 Nechi Bling. Handcrafted with care in India.</p>
+          <p>&copy; {new Date().getFullYear()} Nechi Bling. Handcrafted with care in India.</p>
+          <button className="back-to-top" onClick={scrollToTop} aria-label="Back to top">
+            <span>Back to top</span>
+            <ChevronUp size={16} />
+          </button>
         </div>
       </div>
     </footer>

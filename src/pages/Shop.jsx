@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Package, Sparkles, Gift } from 'lucide-react';
+import { MessageCircle, Package, Sparkles, Gift, Heart } from 'lucide-react';
 import WhatsAppIcon, { WHATSAPP_URL } from '../components/WhatsAppIcon';
 import './Shop.css';
 import banglesImg from '../assets/bangles.png';
@@ -98,6 +98,11 @@ const Shop = () => {
   const initialFilter = CATEGORY_FROM_PARAM[paramCat] ?? 'All';
 
   const [filter, setFilter] = useState(initialFilter);
+  const [wishlist, setWishlist] = useState([]);
+
+  const toggleWishlist = (id) => {
+    setWishlist(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
+  };
 
   useEffect(() => {
     const mapped = CATEGORY_FROM_PARAM[paramCat];
@@ -199,6 +204,9 @@ const Shop = () => {
                     transition={{ delay: index * 0.04 }}
                   >
                     <div className="shop-card-image">
+                      <button className={`wishlist-btn ${wishlist.includes(product.id) ? 'active bounce' : ''}`} onClick={(e) => { e.stopPropagation(); toggleWishlist(product.id); }} aria-label="Add to wishlist">
+                        <Heart size={18} fill={wishlist.includes(product.id) ? 'currentColor' : 'none'} />
+                      </button>
                       <img src={product.image} alt={product.name} loading="lazy" />
                       <span className="shop-card-category">{product.category}</span>
                     </div>

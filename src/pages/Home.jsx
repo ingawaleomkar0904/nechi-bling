@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import WhatsAppIcon, { WHATSAPP_URL } from '../components/WhatsAppIcon';
 import './Home.css';
 import heroImg from '../assets/hero.png';
@@ -67,6 +68,17 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="trust-strip">
+        <div className="container">
+          <div className="trust-items">
+            <div className="trust-item"><span className="trust-icon">✦</span><span>Handpicked</span></div>
+            <div className="trust-item"><span className="trust-icon">✦</span><span>Affordable</span></div>
+            <div className="trust-item"><span className="trust-icon">✦</span><span>Trusted</span></div>
+            <div className="trust-item"><span className="trust-icon">✦</span><span>Lovingly Packed</span></div>
+          </div>
+        </div>
+      </section>
+
       <section id="categories" className="categories">
         <div className="container">
           <div className="section-intro">
@@ -87,10 +99,35 @@ const Home = () => {
                 <div className="category-image">
                   <img src={cat.image} alt={cat.title} />
                   <div className="category-overlay">
-                    <a href={cat.path} className="btn-shop">Shop {cat.title} <ChevronRight size={16} /></a>
+                    <Link to={cat.path} className="btn-shop">Shop {cat.title} <ChevronRight size={16} /></Link>
                   </div>
                 </div>
                 <h3>{cat.title}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="testimonials">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="serif">What Our Customers Say</h2>
+            <div className="gold-divider"></div>
+          </div>
+          <div className="testimonial-grid">
+            {[
+              { quote: 'The bangles I ordered were stunning! Perfect for my sister\'s engagement. Will definitely order again.', name: 'Priya M.', location: 'Mumbai' },
+              { quote: 'I love how every piece feels premium yet affordable. Nechi Bling is my go-to for festive jewellery!', name: 'Anjali S.', location: 'Pune' },
+              { quote: 'Ordered earrings for Diwali — they arrived beautifully packed. Such attention to detail!', name: 'Kavita R.', location: 'Thane' },
+            ].map((t, i) => (
+              <motion.div key={i} className="testimonial-card" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
+                <div className="quote-mark">❝</div>
+                <p className="quote-text">{t.quote}</p>
+                <div className="quote-author">
+                  <span className="author-name">{t.name}</span>
+                  <span className="author-location">{t.location}</span>
+                </div>
               </motion.div>
             ))}
           </div>

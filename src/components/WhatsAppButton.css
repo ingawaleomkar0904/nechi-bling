@@ -12,13 +12,38 @@
   justify-content: center;
   box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
   z-index: 999;
-  transition: var(--transition);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  animation: waEntrance 0.6s ease 1s both, waPulse 3s ease-in-out 2s infinite;
+  will-change: transform, box-shadow;
 }
 
 .floating-wa:hover {
   transform: scale(1.08);
   background-color: var(--wa-green-hover);
   color: var(--white);
+  animation-play-state: paused;
+}
+
+/* Entrance: slide up + fade in */
+@keyframes waEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Gentle breathing pulse */
+@keyframes waPulse {
+  0%, 100% {
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 10px 35px rgba(37, 211, 102, 0.6), 0 0 0 8px rgba(37, 211, 102, 0.1);
+  }
 }
 
 .tooltip {
@@ -34,12 +59,26 @@
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
-  transition: var(--transition);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transform: translateX(8px);
+}
+
+/* Tooltip arrow */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-left-color: var(--primary-maroon);
+  border-right: none;
 }
 
 .floating-wa:hover .tooltip {
   opacity: 1;
   visibility: visible;
+  transform: translateX(0);
 }
 
 @media (max-width: 768px) {
@@ -48,5 +87,15 @@
     right: 20px;
     width: 54px;
     height: 54px;
+  }
+
+  .tooltip {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-wa {
+    animation: none;
   }
 }

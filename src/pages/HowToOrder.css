@@ -121,3 +121,49 @@
     padding-bottom: 48px;
   }
 }
+
+/* ── Timeline connector ── */
+.hto-steps-grid {
+  position: relative;
+}
+
+.hto-steps-grid::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--secondary-gold) 0, var(--secondary-gold) 8px, transparent 8px, transparent 16px);
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* ── Step card hover ── */
+.hto-step-card {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hto-step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(93,14,7,0.06);
+}
+
+/* ── Policy card hover ── */
+.hto-policy-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.hto-policy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(93,14,7,0.06);
+  border-color: var(--secondary-gold);
+}
+
+@media (max-width: 900px) {
+  .hto-steps-grid::before {
+    display: none;
+  }
+}

@@ -1,8 +1,9 @@
 .site-footer {
-  background-color: var(--bg-cream);
+  background-color: #1a0402;
   border-top: 1px solid rgba(212, 175, 55, 0.2);
-  padding: 56px 0 0;
+  padding: 80px 0 0;
   margin-top: 0;
+  color: #eae3d2;
 }
 
 .footer-main {
@@ -15,14 +16,16 @@
 .footer-logo-row {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 16px;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
 .footer-logo {
-  height: 52px;
+  height: 64px;
   width: auto;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
 .footer-brand-text {
@@ -31,9 +34,9 @@
 }
 
 .footer-brand-name {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: var(--primary-maroon);
+  color: #ffffff;
   line-height: 1.2;
 }
 
@@ -42,65 +45,68 @@
 }
 
 .footer-tagline {
-  font-size: 0.62rem;
-  letter-spacing: 3px;
-  color: var(--text-dark);
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  color: rgba(234, 227, 210, 0.7);
   text-transform: uppercase;
   margin-top: 4px;
   font-weight: 500;
 }
 
 .footer-description {
-  font-size: 0.88rem;
-  color: var(--text-light);
-  line-height: 1.75;
+  font-size: 0.9rem;
+  color: rgba(234, 227, 210, 0.75);
+  line-height: 1.8;
   max-width: 400px;
 }
 
 .footer-heading {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 20px;
+  color: var(--secondary-gold);
+  margin-bottom: 24px;
+  letter-spacing: 1px;
 }
 
 .footer-links ul {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .footer-links ul li a {
   font-size: 0.92rem;
-  color: var(--text-light);
-  transition: color 0.25s ease;
+  color: rgba(234, 227, 210, 0.75);
+  transition: color 0.25s ease, transform 0.25s ease;
+  display: inline-block;
 }
 
 .footer-links ul li a:hover {
-  color: var(--primary-maroon);
+  color: var(--secondary-gold);
+  transform: translateX(4px);
 }
 
 .footer-contact ul {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .footer-contact ul li {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-size: 0.92rem;
-  color: var(--text-light);
+  color: rgba(234, 227, 210, 0.75);
 }
 
 .footer-contact ul li a {
-  color: var(--text-light);
+  color: rgba(234, 227, 210, 0.75);
   transition: color 0.25s ease;
 }
 
 .footer-contact ul li a:hover {
-  color: var(--primary-maroon);
+  color: var(--secondary-gold);
 }
 
 .footer-wa-icon {
@@ -111,26 +117,53 @@
 }
 
 .footer-contact-icon {
-  color: var(--primary-maroon);
+  color: var(--secondary-gold);
   flex-shrink: 0;
   opacity: 0.85;
 }
 
 .footer-divider {
   height: 1px;
-  background: rgba(212, 175, 55, 0.2);
-  margin: 44px 0 0;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  margin: 56px 0 0;
 }
 
 .footer-bottom {
-  text-align: center;
-  padding: 22px 0 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0 40px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .footer-bottom p {
-  font-size: 0.84rem;
-  color: var(--text-light);
+  font-size: 0.85rem;
+  color: rgba(234, 227, 210, 0.6);
   letter-spacing: 0.2px;
+}
+
+.back-to-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: rgba(234, 227, 210, 0.8);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  border-color: var(--secondary-gold);
+  color: var(--secondary-gold);
+  background: rgba(212, 175, 55, 0.05);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 900px) {
@@ -146,12 +179,12 @@
 
 @media (max-width: 768px) {
   .site-footer {
-    padding-top: 48px;
+    padding-top: 60px;
   }
 
   .footer-main {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 40px;
     text-align: center;
   }
 
@@ -171,5 +204,11 @@
 
   .footer-contact ul li {
     justify-content: center;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 30px;
   }
 }
