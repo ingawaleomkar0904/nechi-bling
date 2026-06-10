@@ -12,6 +12,7 @@ import giftBoxPremiumImg from '../assets/gift_box_premium.png';
 import mppvBanglesImg from '../assets/mppv_bangles.jpg';
 import qvpBanglesImg from '../assets/qvp_bangles.jpg';
 import mpvBanglesImg from '../assets/mpv_bangles.jpg';
+import qspBanglesImg from '../assets/qsp_bangles.jpg';
 
 const CATEGORIES = ['All', 'Bangles', 'Earrings', 'Neckpieces', 'Gifting'];
 
@@ -44,7 +45,7 @@ const products = [
     id: 3,
     name: 'MPPV Gold Bangles',
     category: 'Bangles',
-    price: '₹250',
+    price: '₹249',
     image: mppvBanglesImg,
     description: 'An exquisite set of four textured gold-plated bangles, designed with traditional detailing to complement any festive attire.',
   },
@@ -52,7 +53,7 @@ const products = [
     id: 4,
     name: 'QVP Gold-Plated Kadas',
     category: 'Bangles',
-    price: '₹150',
+    price: '₹149',
     image: qvpBanglesImg,
     description: 'A beautifully crafted pair of open-work gold-toned kadas featuring delicate filigree patterns and a premium polished finish.',
   },
@@ -60,9 +61,17 @@ const products = [
     id: 9,
     name: 'MPV Silver Diamond Bangles',
     category: 'Bangles',
-    price: '₹300',
+    price: '₹299',
     image: mpvBanglesImg,
     description: 'A stunning pair of silver-plated bangles embellished with shimmering square cubic zirconia diamonds for modern elegance.',
+  },
+  {
+    id: 10,
+    name: 'QSP Gold-Plated Bangles',
+    category: 'Bangles',
+    price: '₹199',
+    image: qspBanglesImg,
+    description: 'A set of four delicate gold-plated bangles featuring a beautifully textured micro-beaded pattern that adds a subtle sparkle to your wrists.',
   },
   {
     id: 5,
