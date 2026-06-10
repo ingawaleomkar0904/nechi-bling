@@ -6,13 +6,22 @@ import WhatsAppIcon, { WHATSAPP_URL } from '../components/WhatsAppIcon';
 import './Shop.css';
 
 // Premium Generated Assets
-import templeJhumkaImg from '../assets/temple_jhumka.png';
 import kundanChokerImg from '../assets/kundan_choker.png';
 import giftBoxPremiumImg from '../assets/gift_box_premium.png';
 import mppvBanglesImg from '../assets/mppv_bangles.jpg';
 import qvpBanglesImg from '../assets/qvp_bangles.jpg';
 import mpvBanglesImg from '../assets/mpv_bangles.jpg';
 import qspBanglesImg from '../assets/qsp_bangles.jpg';
+import erSvSt01Img from '../assets/er_sv_st01.jpg';
+import erSvFl02Img from '../assets/er_sv_fl02.jpg';
+import erSvFl04Img from '../assets/er_sv_fl04.jpg';
+import erGdFl05Img from '../assets/er_gd_fl05.jpg';
+import erGdCr01Img from '../assets/er_gd_cr01.jpg';
+import erGdWv01Img from '../assets/er_gd_wv01.jpg';
+import erGdFl01Img from '../assets/er_gd_fl01.jpg';
+import erGdFl06Img from '../assets/er_gd_fl06.jpg';
+import erSvSp01Img from '../assets/er_sv_sp01.jpg';
+import erGdRub01Img from '../assets/er_gd_rub_01.jpg';
 
 const CATEGORIES = ['All', 'Bangles', 'Earrings', 'Neckpieces', 'Gifting'];
 
@@ -26,20 +35,84 @@ const CATEGORY_FROM_PARAM = {
 
 const products = [
   {
-    id: 1,
-    name: 'Temple Jhumka Earrings',
+    id: 11,
+    name: 'ER-SV-ST01 Crystal Halo Studs',
     category: 'Earrings',
-    price: '₹499',
-    image: templeJhumkaImg,
-    description: 'Classic temple-motif jhumkas featuring delicate rubies and hanging pearls — light, comfortable, and perfect for daily wear.',
+    price: '₹129',
+    image: erSvSt01Img,
+    description: 'Charming circle studs in silver, embellished with a sparkling border of round cubic zirconia stones for minimalist elegance.',
   },
   {
-    id: 2,
-    name: 'Pearl Drop Jhumkas',
+    id: 12,
+    name: 'ER-SV-FL02 Marquise Flower Drops',
     category: 'Earrings',
-    price: '₹550',
-    image: templeJhumkaImg,
-    description: 'Elegantly detailed jhumkas with premium dangling pearls and subtle gold craftwork.',
+    price: '₹119',
+    image: erSvFl02Img,
+    description: 'Stunning drop earrings in silver featuring cascading marquise-cut floral clusters that catch the light beautifully.',
+  },
+  {
+    id: 13,
+    name: 'ER-SV-FL04 Cascading Star Flowers',
+    category: 'Earrings',
+    price: '₹80',
+    image: erSvFl04Img,
+    description: 'Delicate silver drop earrings showing three dangling star-flowers set with glittering micro-zirconia stones.',
+  },
+  {
+    id: 14,
+    name: 'ER-GD-FL05 Golden Marquise Studs',
+    category: 'Earrings',
+    price: '₹50',
+    image: erGdFl05Img,
+    description: 'Beautiful gold-plated flower stud earrings featuring five petals of clear marquise-cut zirconia stones surrounding a gold core.',
+  },
+  {
+    id: 15,
+    name: 'ER-GD-CR01 Golden Double-Row Hoops',
+    category: 'Earrings',
+    price: '₹50',
+    image: erGdCr01Img,
+    description: 'Classic gold-plated half-hoop earrings featuring two clean rows of embedded round micro-diamonds for daily sparkle.',
+  },
+  {
+    id: 16,
+    name: 'ER-GD-WV01 Leafy Wave Drops',
+    category: 'Earrings',
+    price: '₹70',
+    image: erGdWv01Img,
+    description: 'Elegant rose gold-toned earrings featuring a wavy open-work leaf design topped with a delicate diamond floral cluster.',
+  },
+  {
+    id: 17,
+    name: 'ER-GD-FL01 Pearl Cluster Studs',
+    category: 'Earrings',
+    price: '₹80',
+    image: erGdFl01Img,
+    description: 'A majestic pair of gold-plated stud earrings showing a premium pearl cluster surrounding a deep ruby-red center stone.',
+  },
+  {
+    id: 18,
+    name: 'ER-GD-FL06 Silver Starburst Studs',
+    category: 'Earrings',
+    price: '₹70',
+    image: erGdFl06Img,
+    description: 'Glistening silver circular studs decorated with a starburst core of round diamonds and a matching outer halo.',
+  },
+  {
+    id: 19,
+    name: 'ER-SV-SP01 Silver Spiral Swirls',
+    category: 'Earrings',
+    price: '₹69',
+    image: erSvSp01Img,
+    description: 'Fascinating silver-plated studs crafted in a delicate spiral swirl pattern and paved with brilliant round cubic zirconia.',
+  },
+  {
+    id: 20,
+    name: 'ER-GD-RUB-01 Golden Ruby Jhumkas',
+    category: 'Earrings',
+    price: '₹70',
+    image: erGdRub01Img,
+    description: 'Heritage gold-plated jhumka drop earrings featuring a detailed dome-like design, ruby-red center, and dangling golden beads.',
   },
   {
     id: 3,

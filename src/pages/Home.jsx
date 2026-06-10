@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import WhatsAppIcon, { WHATSAPP_URL } from '../components/WhatsAppIcon';
 import './Home.css';
 import heroImg from '../assets/hero.png';
-import banglesImg from '../assets/bangles.png';
-import earringsImg from '../assets/earrings.png';
+import banglesImg from '../assets/qsp_bangles.jpg';
+import earringsImg from '../assets/er_gd_rub_01.jpg';
 import logo from '../assets/logo.png';
 import giftingImg from '../assets/gifting_image_1779443416146.png';
 
