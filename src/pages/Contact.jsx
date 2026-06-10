@@ -28,7 +28,7 @@ const contactMethods = [
     title: 'WhatsApp',
     description: 'Fastest way to order or ask about availability.',
     link: WHATSAPP_URL,
-    linkText: '+91 72489 14154',
+    linkText: '+91 88558 24154',
     icon: <WhatsAppIcon />,
     iconClass: 'wa',
   },

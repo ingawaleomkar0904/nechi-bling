@@ -1,4 +1,4 @@
-export const WHATSAPP_URL = 'https://wa.me/917248914154';
+export const WHATSAPP_URL = 'https://wa.me/918855824154';
 
 const WhatsAppIcon = ({ size = 20, className = '' }) => (
   <svg

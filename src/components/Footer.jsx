@@ -55,7 +55,7 @@ const Footer = () => {
             <ul>
               <li>
                 <WhatsAppIcon size={16} className="footer-wa-icon" />
-                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">+91 72489 14154</a>
+                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">+91 88558 24154</a>
               </li>
               <li>
                 <InstagramIcon />

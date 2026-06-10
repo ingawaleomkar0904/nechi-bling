@@ -7,9 +7,11 @@ import './Shop.css';
 
 // Premium Generated Assets
 import templeJhumkaImg from '../assets/temple_jhumka.png';
-import maroonBanglesImg from '../assets/maroon_bangles.png';
 import kundanChokerImg from '../assets/kundan_choker.png';
 import giftBoxPremiumImg from '../assets/gift_box_premium.png';
+import mppvBanglesImg from '../assets/mppv_bangles.jpg';
+import qvpBanglesImg from '../assets/qvp_bangles.jpg';
+import mpvBanglesImg from '../assets/mpv_bangles.jpg';
 
 const CATEGORIES = ['All', 'Bangles', 'Earrings', 'Neckpieces', 'Gifting'];
 
@@ -40,19 +42,27 @@ const products = [
   },
   {
     id: 3,
-    name: 'Maroon Stone Bangles',
+    name: 'MPPV Gold Bangles',
     category: 'Bangles',
-    price: '₹850',
-    image: maroonBanglesImg,
-    description: 'Rich maroon stones set in detailed gold-tone — a timeless festive favorite for weddings and rituals.',
+    price: '₹250',
+    image: mppvBanglesImg,
+    description: 'An exquisite set of four textured gold-plated bangles, designed with traditional detailing to complement any festive attire.',
   },
   {
     id: 4,
-    name: 'Gold-Plated Kada Pair',
+    name: 'QVP Gold-Plated Kadas',
     category: 'Bangles',
-    price: '₹650',
-    image: maroonBanglesImg,
-    description: 'Sleek, heavily patterned gold kada set with a polished premium finish.',
+    price: '₹150',
+    image: qvpBanglesImg,
+    description: 'A beautifully crafted pair of open-work gold-toned kadas featuring delicate filigree patterns and a premium polished finish.',
+  },
+  {
+    id: 9,
+    name: 'MPV Silver Diamond Bangles',
+    category: 'Bangles',
+    price: '₹300',
+    image: mpvBanglesImg,
+    description: 'A stunning pair of silver-plated bangles embellished with shimmering square cubic zirconia diamonds for modern elegance.',
   },
   {
     id: 5,
