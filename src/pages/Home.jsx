@@ -3,18 +3,17 @@ import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import WhatsAppIcon, { WHATSAPP_URL } from '../components/WhatsAppIcon';
 import './Home.css';
-import heroImg from '../assets/hero.png';
+import heroImg from '../assets/np_gd_pd02.jpg';
 import banglesImg from '../assets/qsp_bangles.jpg';
-import earringsImg from '../assets/er_gd_rub_01.jpg';
+import earringsImg from '../assets/er_gd_fl01.jpg';
 import logo from '../assets/logo.png';
-import giftingImg from '../assets/gifting_image_1779443416146.png';
+import neckpiecesImg from '../assets/np_gd_pd04.jpg';
 
 const Home = () => {
   const categories = [
     { title: 'Bangles', image: banglesImg, path: '/shop?cat=bangles' },
     { title: 'Earrings', image: earringsImg, path: '/shop?cat=earrings' },
-    { title: 'Neckpieces', image: heroImg, path: '/shop?cat=neckpieces' },
-    { title: 'Gifting', image: giftingImg, path: '/shop?cat=gifting' },
+    { title: 'Neckpieces', image: neckpiecesImg, path: '/shop?cat=neckpieces' },
   ];
 
   return (
@@ -107,8 +106,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-
 
       <section className="whatsapp-cta-section">
         <div className="container">

@@ -3,7 +3,7 @@ import { MapPin, Mail } from 'lucide-react';
 import WhatsAppIcon, { WHATSAPP_URL } from '../components/WhatsAppIcon';
 import './Contact.css';
 const INSTAGRAM_URL = 'https://instagram.com/nechi.bling';
-const EMAIL = 'hello@nechibling.in';
+const EMAIL = 'shop.nechibling@gmail.com';
 
 const InstagramIcon = ({ size = 22 }) => (
   <svg
@@ -28,7 +28,7 @@ const contactMethods = [
     title: 'WhatsApp',
     description: 'Fastest way to order or ask about availability.',
     link: WHATSAPP_URL,
-    linkText: '+91 88558 24154',
+    linkText: '+91 77588 85956',
     icon: <WhatsAppIcon />,
     iconClass: 'wa',
   },
@@ -42,7 +42,7 @@ const contactMethods = [
   },
   {
     title: 'Email',
-    description: 'For detailed enquiries and gifting requests.',
+    description: 'For detailed enquiries and custom orders.',
     link: `mailto:${EMAIL}`,
     linkText: EMAIL,
     icon: <Mail size={22} strokeWidth={1.5} />,
@@ -63,7 +63,7 @@ const Contact = () => {
           >
             <h1 className="page-title">We&apos;d love to hear from you.</h1>
             <p className="page-desc">
-              Questions, custom orders, gifting help — drop us a message and we&apos;ll reply soon.
+              Questions, custom orders, shopping help — drop us a message and we&apos;ll reply soon.
             </p>
           </motion.div>
         </div>

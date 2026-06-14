@@ -13,7 +13,7 @@ const InstagramIcon = ({ size = 16 }) => (
 );
 
 const INSTAGRAM_URL = 'https://instagram.com/nechi.bling';
-const EMAIL = 'hello@nechibling.in';
+const EMAIL = 'shop.nechibling@gmail.com';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -35,7 +35,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="footer-description">
-              A home-grown, women-led atelier crafting elegant imitation jewellery for everyday joy, festive sparkle and thoughtful gifting.
+              A home-grown, women-led atelier crafting elegant imitation jewellery for everyday joy, festive sparkle and personal styling.
             </p>
           </div>
 
@@ -55,7 +55,7 @@ const Footer = () => {
             <ul>
               <li>
                 <WhatsAppIcon size={16} className="footer-wa-icon" />
-                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">+91 88558 24154</a>
+                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">+91 77588 85956</a>
               </li>
               <li>
                 <InstagramIcon />

@@ -22,15 +22,24 @@ import erGdFl01Img from '../assets/er_gd_fl01.jpg';
 import erGdFl06Img from '../assets/er_gd_fl06.jpg';
 import erSvSp01Img from '../assets/er_sv_sp01.jpg';
 import erGdRub01Img from '../assets/er_gd_rub_01.jpg';
+import erRgCz03Img from '../assets/er_rg_cz03.jpg';
+import npGdPd01Img from '../assets/np_gd_pd01.jpg';
+import npGdPd02Img from '../assets/np_gd_pd02.jpg';
+import npGdPd03Img from '../assets/np_gd_pd03.jpg';
+import npGdPd04Img from '../assets/np_gd_pd04.jpg';
+import npGdPd05Img from '../assets/np_gd_pd05.jpg';
+import npGdPd06Img from '../assets/np_gd_pd06.jpg';
+import npGdPd07Img from '../assets/np_gd_pd07.jpg';
+import npGdPd08Img from '../assets/np_gd_pd08.jpg';
+import npGdPd09Img from '../assets/np_gd_pd09.jpg';
+import npGdPd10Img from '../assets/np_gd_pd10.jpg';
 
-const CATEGORIES = ['All', 'Bangles', 'Earrings', 'Neckpieces', 'Gifting'];
+const CATEGORIES = ['All', 'Bangles', 'Earrings', 'Neckpieces'];
 
 const CATEGORY_FROM_PARAM = {
   bangles: 'Bangles',
   earrings: 'Earrings',
   neckpieces: 'Neckpieces',
-  gifting: 'Gifting',
-  combos: 'Gifting',
 };
 
 const products = [
@@ -38,7 +47,7 @@ const products = [
     id: 11,
     name: 'ER-SV-ST01 Crystal Halo Studs',
     category: 'Earrings',
-    price: '₹129',
+    price: '₹49',
     image: erSvSt01Img,
     description: 'Charming circle studs in silver, embellished with a sparkling border of round cubic zirconia stones for minimalist elegance.',
   },
@@ -46,7 +55,7 @@ const products = [
     id: 12,
     name: 'ER-SV-FL02 Marquise Flower Drops',
     category: 'Earrings',
-    price: '₹119',
+    price: '₹149',
     image: erSvFl02Img,
     description: 'Stunning drop earrings in silver featuring cascading marquise-cut floral clusters that catch the light beautifully.',
   },
@@ -54,7 +63,7 @@ const products = [
     id: 13,
     name: 'ER-SV-FL04 Cascading Star Flowers',
     category: 'Earrings',
-    price: '₹80',
+    price: '₹149',
     image: erSvFl04Img,
     description: 'Delicate silver drop earrings showing three dangling star-flowers set with glittering micro-zirconia stones.',
   },
@@ -62,7 +71,7 @@ const products = [
     id: 14,
     name: 'ER-GD-FL05 Golden Marquise Studs',
     category: 'Earrings',
-    price: '₹50',
+    price: '₹79',
     image: erGdFl05Img,
     description: 'Beautiful gold-plated flower stud earrings featuring five petals of clear marquise-cut zirconia stones surrounding a gold core.',
   },
@@ -70,15 +79,16 @@ const products = [
     id: 15,
     name: 'ER-GD-CR01 Golden Double-Row Hoops',
     category: 'Earrings',
-    price: '₹50',
+    price: 'Out of Stock',
     image: erGdCr01Img,
     description: 'Classic gold-plated half-hoop earrings featuring two clean rows of embedded round micro-diamonds for daily sparkle.',
+    outOfStock: true,
   },
   {
     id: 16,
     name: 'ER-GD-WV01 Leafy Wave Drops',
     category: 'Earrings',
-    price: '₹70',
+    price: '₹69',
     image: erGdWv01Img,
     description: 'Elegant rose gold-toned earrings featuring a wavy open-work leaf design topped with a delicate diamond floral cluster.',
   },
@@ -86,7 +96,7 @@ const products = [
     id: 17,
     name: 'ER-GD-FL01 Pearl Cluster Studs',
     category: 'Earrings',
-    price: '₹80',
+    price: '₹49',
     image: erGdFl01Img,
     description: 'A majestic pair of gold-plated stud earrings showing a premium pearl cluster surrounding a deep ruby-red center stone.',
   },
@@ -94,7 +104,7 @@ const products = [
     id: 18,
     name: 'ER-GD-FL06 Silver Starburst Studs',
     category: 'Earrings',
-    price: '₹70',
+    price: '₹99',
     image: erGdFl06Img,
     description: 'Glistening silver circular studs decorated with a starburst core of round diamonds and a matching outer halo.',
   },
@@ -110,9 +120,17 @@ const products = [
     id: 20,
     name: 'ER-GD-RUB-01 Golden Ruby Jhumkas',
     category: 'Earrings',
-    price: '₹70',
+    price: '₹49',
     image: erGdRub01Img,
     description: 'Heritage gold-plated jhumka drop earrings featuring a detailed dome-like design, ruby-red center, and dangling golden beads.',
+  },
+  {
+    id: 21,
+    name: 'ER-RG-CZ03 Rose Gold Studs Trio',
+    category: 'Earrings',
+    price: '₹149',
+    image: erRgCz03Img,
+    description: 'An elegant trio set of round rose gold-plated stud earrings, featuring three different sizes of glittering cubic zirconia stones for layered styling or daily versatility.',
   },
   {
     id: 3,
@@ -147,36 +165,84 @@ const products = [
     description: 'A set of four delicate gold-plated bangles featuring a beautifully textured micro-beaded pattern that adds a subtle sparkle to your wrists.',
   },
   {
-    id: 5,
-    name: 'Kundan Choker Set',
+    id: 22,
+    name: 'NP-GD-PD01 Diamond Rhombus Pendant Set',
     category: 'Neckpieces',
-    price: '₹1,200',
-    image: kundanChokerImg,
-    description: 'Stunning choker necklace decorated with premium Kundan stones and matching earrings — ideal for ethnic celebrations.',
+    price: '₹149',
+    image: npGdPd01Img,
+    description: 'A stunning gold-plated necklace set featuring a geometric rhombus-shaped pendant with a sparkling cubic zirconia hexagon and a single ruby center. Comes with matching drop earrings.',
   },
   {
-    id: 6,
-    name: 'Royal Choker Set',
+    id: 23,
+    name: 'NP-GD-PD02 Leafy Filigree Pendant Set',
     category: 'Neckpieces',
-    price: '₹1,350',
-    image: kundanChokerImg,
-    description: 'A majestic Kundan neckpiece featuring intricate pearl drops and emerald accents.',
+    price: '₹149',
+    image: npGdPd02Img,
+    description: 'An elegant gold-plated pendant set showcasing a leaf-shaped openwork filigree design embellished with micro-zirconia diamonds and three ruby accents. Presented in a premium cream box.',
   },
   {
-    id: 7,
-    name: 'Bridal Combo Gift Box',
-    category: 'Gifting',
-    price: '₹2,500',
-    image: giftBoxPremiumImg,
-    description: 'A curated gift box containing a matching pair of earrings and select Kada bangles, beautifully packaged.',
+    id: 24,
+    name: 'NP-GD-PD03 Royal Spade Pendant Set',
+    category: 'Neckpieces',
+    price: '₹149',
+    image: npGdPd03Img,
+    description: 'A majestic gold-plated spade-shaped pendant featuring a delicate floral core, paved with shimmering white stones and a teardrop ruby. Comes with matching traditional stud earrings.',
   },
   {
-    id: 8,
-    name: 'Signature Gift Box Special',
-    category: 'Gifting',
-    price: '₹1,500',
-    image: giftBoxPremiumImg,
-    description: 'Our signature Nechi Bling cream box lined with rich red velvet, containing handpicked luxury pieces.',
+    id: 25,
+    name: 'NP-GD-PD04 Floral Teardrop Pendant Set',
+    category: 'Neckpieces',
+    price: '₹149',
+    image: npGdPd04Img,
+    description: 'An exquisite gold-plated teardrop pendant highlighting an intricate flower motif set with shimmering diamonds and a ruby-red center stone. Housed in a luxury mahogany wood velvet box.',
+  },
+  {
+    id: 26,
+    name: 'NP-GD-PD05 Sunwheel Heritage Pendant Set',
+    category: 'Neckpieces',
+    price: '₹149',
+    image: npGdPd05Img,
+    description: 'A traditional round sunwheel pendant set crafted with detailed gold filigree, a floral core, and matching drops of pearls and rubies for a regal ethnic look.',
+  },
+  {
+    id: 27,
+    name: 'NP-GD-PD06 Royal Hearts Pendant Set',
+    category: 'Neckpieces',
+    price: '₹149',
+    image: npGdPd06Img,
+    description: 'A lovely gold-plated necklace set featuring a geometric rhombus pendant with double heart cut-outs, accented with diagonal rows of glistening cubic zirconia and rubies. Includes matching earrings.',
+  },
+  {
+    id: 28,
+    name: 'NP-GD-PD07 Bell Filigree Pendant Set',
+    category: 'Neckpieces',
+    price: '₹149',
+    image: npGdPd07Img,
+    description: 'A traditional gold-plated bell-shaped pendant with intricate floral filigree work, adorned with sparkling white stones and delicate ruby highlights. Comes with matching bell drop earrings.',
+  },
+  {
+    id: 29,
+    name: 'NP-GD-PD08 Golden Butterfly Pendant Set',
+    category: 'Neckpieces',
+    price: '₹149',
+    image: npGdPd08Img,
+    description: 'A whimsical gold-plated pendant set featuring a rhombus frame enclosing a delicate butterfly motif, highlighted with micro-zirconia stones and ruby corners. Comes with matching studs.',
+  },
+  {
+    id: 30,
+    name: 'NP-GD-PD09 Starburst Wheel Pendant Set',
+    category: 'Neckpieces',
+    price: '₹149',
+    image: npGdPd09Img,
+    description: 'An ornate gold-plated circular pendant set designed with wheel-spoke floral details, a starburst micro-diamond center, and ruby accents. Complete with matching stud earrings.',
+  },
+  {
+    id: 31,
+    name: 'NP-GD-PD10 Honeycomb Paisley Pendant Set',
+    category: 'Neckpieces',
+    price: '₹149',
+    image: npGdPd10Img,
+    description: 'An elegant gold-plated paisley-shaped pendant showing a unique honeycomb mesh design, detailed with leaf motifs, rubies, and micro-diamonds. Comes with matching drop earrings.',
   },
 ];
 
@@ -185,6 +251,15 @@ const trustPoints = [
   { icon: MessageCircle, text: 'Order in one tap via WhatsApp' },
   { icon: Gift, text: 'Lovingly packed for you or someone special' },
 ];
+
+const parsePrice = (priceStr) => {
+  if (!priceStr || priceStr.toLowerCase().includes('out of stock')) {
+    return Infinity;
+  }
+  const cleanStr = priceStr.replace(/[^\d]/g, '');
+  const num = parseInt(cleanStr, 10);
+  return isNaN(num) ? Infinity : num;
+};
 
 const Shop = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -217,10 +292,18 @@ const Shop = () => {
     };
   }, [selectedProduct]);
 
-  const filteredProducts = useMemo(
-    () => (filter === 'All' ? products : products.filter((p) => p.category === filter)),
-    [filter]
-  );
+  const filteredProducts = useMemo(() => {
+    const list = filter === 'All' ? products : products.filter((p) => p.category === filter);
+    return [...list].sort((a, b) => {
+      // Keep outOfStock at the end
+      if (a.outOfStock && !b.outOfStock) return 1;
+      if (!a.outOfStock && b.outOfStock) return -1;
+
+      const priceA = parsePrice(a.price);
+      const priceB = parsePrice(b.price);
+      return priceA - priceB;
+    });
+  }, [filter]);
 
   const handleFilter = (cat) => {
     setFilter(cat);
@@ -307,14 +390,14 @@ const Shop = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.04 }}
                   >
-                    <div 
-                      className="shop-card-image" 
+                    <div
+                      className="shop-card-image"
                       onClick={() => setSelectedProduct(product)}
                       style={{ cursor: 'zoom-in' }}
                     >
-                      <button 
-                        className={`wishlist-btn ${wishlist.includes(product.id) ? 'active bounce' : ''}`} 
-                        onClick={(e) => { e.stopPropagation(); toggleWishlist(product.id); }} 
+                      <button
+                        className={`wishlist-btn ${wishlist.includes(product.id) ? 'active bounce' : ''}`}
+                        onClick={(e) => { e.stopPropagation(); toggleWishlist(product.id); }}
                         aria-label="Add to wishlist"
                       >
                         <Heart size={18} fill={wishlist.includes(product.id) ? 'currentColor' : 'none'} />
@@ -327,14 +410,24 @@ const Shop = () => {
                       <p className="shop-card-desc">{product.description}</p>
                       <div className="shop-card-footer">
                         <span className="shop-card-price">{product.price}</span>
-                        <button
-                          type="button"
-                          className="wa-btn wa-btn--block"
-                          onClick={() => handleOrder(product)}
-                        >
-                          <WhatsAppIcon size={18} />
-                          Order
-                        </button>
+                        {product.outOfStock ? (
+                          <button
+                            type="button"
+                            className="oos-btn oos-btn--block"
+                            disabled
+                          >
+                            Out of stock
+                          </button>
+                        ) : (
+                          <button
+                            type="button"
+                            className="wa-btn wa-btn--block"
+                            onClick={() => handleOrder(product)}
+                          >
+                            <WhatsAppIcon size={18} />
+                            Order
+                          </button>
+                        )}
                       </div>
                     </div>
                   </motion.article>
@@ -359,7 +452,7 @@ const Shop = () => {
           </AnimatePresence>
 
           <p className="shop-note">
-            Prices are indicative. Final amount confirmed on WhatsApp. See{' '}
+            Prices are final. Order confirmed on WhatsApp. See{' '}
             <Link to="/how-to-order" className="text-link">how to order</Link> for payment &amp; delivery details.
           </p>
         </div>
@@ -390,7 +483,7 @@ const Shop = () => {
               >
                 <X size={20} />
               </button>
-              
+
               <div className="modal-content">
                 <div className="modal-image-wrapper">
                   <img src={selectedProduct.image} alt={selectedProduct.name} className="modal-image" />
@@ -399,23 +492,33 @@ const Shop = () => {
                   <span className="modal-category">{selectedProduct.category}</span>
                   <h2 className="modal-title serif">{selectedProduct.name}</h2>
                   <p className="modal-desc">{selectedProduct.description}</p>
-                  
+
                   <div className="modal-footer-section">
                     <div className="modal-price-row">
-                      <span className="modal-label-text">Indicative Price</span>
+                      <span className="modal-label-text">Price</span>
                       <span className="modal-price">{selectedProduct.price}</span>
                     </div>
-                    <button
-                      type="button"
-                      className="wa-btn wa-btn--lg wa-btn--block"
-                      onClick={() => {
-                        handleOrder(selectedProduct);
-                        setSelectedProduct(null);
-                      }}
-                    >
-                      <WhatsAppIcon size={20} />
-                      Order
-                    </button>
+                    {selectedProduct.outOfStock ? (
+                      <button
+                        type="button"
+                        className="oos-btn oos-btn--lg oos-btn--block"
+                        disabled
+                      >
+                        Out of stock
+                      </button>
+                    ) : (
+                      <button
+                        type="button"
+                        className="wa-btn wa-btn--lg wa-btn--block"
+                        onClick={() => {
+                          handleOrder(selectedProduct);
+                          setSelectedProduct(null);
+                        }}
+                      >
+                        <WhatsAppIcon size={20} />
+                        Order
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
